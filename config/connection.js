@@ -3,10 +3,10 @@ var mysql = require('mysql');
 
 // connecting to database
 var connection = mysql.createConnection({
-  host: process.env.dbHost,
-  user: process.env.dbUser,
-  password: process.env.dbPassword,
-  database: process.env.db
+  host: "localhost",
+  user: "root",
+  password: "password",
+  database: "burgers_db"
 });
 
 // Error handling and success console
