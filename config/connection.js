@@ -1,13 +1,18 @@
 // mysql package
 var mysql = require('mysql');
+var connection;
 
 // connecting to database
-var connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "password",
-  database: "burgers_db"
-});
+if(proecess.env.JAWSDB_URL) {
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
+}else{
+    connection = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "password",
+    database: "burgers_db"
+    });
+}
 
 // Error handling and success console
 connection.connect(function(err) {
