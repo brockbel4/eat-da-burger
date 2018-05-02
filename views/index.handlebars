@@ -1,0 +1,27 @@
+<ul style='float: left;'>
+{{#each burgers}}
+    {{#unless devoured}}
+    <li id='{{{id}}}' class='burger'>
+        {{burgerName}}
+        <form action='/burger/{{{id}}}' method='POST'>
+            <input type='submit' value="Devour it">
+        </form>
+    </li>
+    {{/unless}}
+{{/each}}
+</ul>
+
+<form action='/burger' method='POST'>
+    <input type='text' name='burgerName'>
+    <input type='submit' value='Add Burger'>
+</form>
+
+<ul style='float: right;'>
+{{#each burgers}}
+    {{#if devoured}}
+    <li id='{{{id}}}' class='burgerDevoured'>
+        {{burgerName}}
+    </li>
+    {{/if}}
+{{/each}}
+</ul>
