@@ -1,0 +1,11 @@
+body{
+    background-color: tan;
+}
+
+.notEaten{
+    float: left;
+}
+
+.eaten{
+    float: right;
+}

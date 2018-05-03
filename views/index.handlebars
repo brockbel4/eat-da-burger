@@ -1,4 +1,4 @@
-<ul style='float: left;'>
+<ul class='notEaten'>
 {{#each burgers}}
     {{#unless devoured}}
     <li id='{{{id}}}' class='burger'>
@@ -16,7 +16,7 @@
     <input type='submit' value='Add Burger'>
 </form>
 
-<ul style='float: right;'>
+<ul class='eaten'>
 {{#each burgers}}
     {{#if devoured}}
     <li id='{{{id}}}' class='burgerDevoured'>
